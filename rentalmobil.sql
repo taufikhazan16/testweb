@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Apr 2024 pada 14.02
+-- Waktu pembuatan: 13 Apr 2024 pada 01.43
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -166,7 +166,9 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`id`, `nama`, `alamat`, `nomor_telepon`, `nomor_sim`, `foto`, `created_at`, `updated_at`) VALUES
 (1, 'Taufik', 'Matraman', '08522331900', '3210299200122', NULL, NULL, NULL),
-(2, 'Budiman', 'Pulogadung', '08123220930', '3202991002991', NULL, NULL, NULL);
+(2, 'Budiman', 'Pulogadung', '08123220930', '3202991002991', NULL, NULL, NULL),
+(3, 'Prakasa', 'Jalan Majapahit No 8 Matraman Jakarta Timur', '083737383833', '3211102292010', NULL, '2024-04-12 16:04:28', '2024-04-12 16:04:28'),
+(5, 'Agung', 'Jalan Majapahit No 18 Pulogadung Jakarta Timur', '083737383811', '3211102292027', NULL, '2024-04-12 16:05:20', '2024-04-12 16:05:20');
 
 -- --------------------------------------------------------
 
@@ -207,8 +209,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('1N7YSV7fSy3ZUmEiJimRpbjIUUXNZXMMlpmzOMUD', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiQ3Y1VUpqVlgwZXJHeXRJM2VmV2o5amdKVHF4bTM5NVFrMkFVMXNFeiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMyOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvcGVtaW5qYW1hbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkcUVQTVJEU2RjRkxiZnJzOHgzTlpxLk5mcVpOV0VYSDR0L2REaUhVZDRaZ0RNL21ZNXVJNTYiO30=', 1712922903),
-('jnGB6XCaaZHtP3z4upPrEURD2QnUDYb1Te9YpZQP', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiamhYZ2U2TWY5SUszbk9Xem1ZeTZvQ2FUdmRCNGJLZERlQzN1b2tRWSI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMjoiaHR0cDovL2xvY2FsaG9zdDo4MDAwL21hbmFnZW1lbnQiO31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyNzoiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2xvZ2luIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1712922760);
+('nzZn5zRRK76gY1FrC8AXVV39ZVpck1SGcUgyfeWE', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNlRlM2xpSjE1Zk0wMkJzSHpyemJlVkFUU285bXRNNWtaQ2VvV1hkQyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hbmdnb3RhIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRxRVBNUkRTZGNGTGJmcnM4eDNOWnEuTmZxWk5XRVhINHQvZERpSFVkNFpnRE0vbVk1dUk1NiI7fQ==', 1712965416);
 
 -- --------------------------------------------------------
 
@@ -381,7 +382,7 @@ ALTER TABLE `pengembalian`
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
